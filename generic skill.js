@@ -14,9 +14,11 @@ on("chat:message", function(msg) {
 		var param= msg.content.split(" ");
 		_.each(msg.selected, function(selected) {
 			var shooterToken=getObj("graphic", selected._id);
-			var stat=param[1];
 
+			var stat=param[1];
 			var modifier=param[2];
+
+			var modifier=parseInt(param[2]);
 			var modifierNumber=parseInt(modifier);
 			var shooterChar=shooterToken.get("represents");
 			if(!shooterChar){
@@ -31,15 +33,22 @@ on("chat:message", function(msg) {
 	if(msg.type=="api" && msg.content.indexOf("!sheettest")!==-1){
 		var param= msg.content.split("/");
 		var name=param[1];
-		log(name);
+		
 		var shooterCharObject=findObjs({ name: name, _type: "character" }, {caseInsensitive: true});
 			
 		var stat=param[2];
 
-		var modifier=param[3];
-		var modifierNumber=parseInt(modifier);
-		log(shooterCharObject[0]);
+		var modifier=param[3].split("+");
+		log(modifier);
+				
+		var modifierNumber=0;
+		for(var i=0; i<modifier.length;i++){
+			
+			modifierNumber+=parseInt(modifier[i]);
+		}
+		
 		var shooterChar=shooterCharObject[0];
+		
 		if(!shooterChar){
 			sendChat("ERROR", "Token represents no character");
 		}else{
@@ -182,13 +191,7 @@ function characterTest(char, ability, modifier){
 	}
 	
 	
-	var abilityObject=findObjs({ name: ability.toString(), _characterid: char.id }, {caseInsensitive: true});
-
-	if(abilityObject.length==0){
-		sendChat("ERROR", ability.toString()+" is not a valid ability!");
-		return;
-	}
-	var abilityValue= parseInt(abilityObject[0].get("current"));
+	
 
 
 	var fatigueValue= getCharAbilityValue(char, "fatigue");
@@ -197,27 +200,24 @@ function characterTest(char, ability, modifier){
 	}
 	var roll=randomInteger(100);
 	
-	var toBeat=abilityValue+modifier;
+	var toBeat=modifier;
 	var degrees=0;
 	
 	if(roll<=toBeat){
 		degrees= Math.floor((toBeat-roll)/10).toString();
-		message+="Succeeds the <b>"+abilityNames[ability.toString().toLowerCase()]+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> scored <b>" +degrees + "</b> degrees of success.";
-		if((ability.indexOf("BS")!==-1||ability.indexOf("WS")!==-1)){
-			hitLocation(roll);
-			message+=" Hit the <b>"+hitSpot.toString()+"</b>.";
-		}
+		message+="Succeeds the <b>"+ability.toString()+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> scored <b>" +degrees + "</b> degrees of success.";
+		
 		
 		sendChat(char.get("name"), message);
 		
 		return true;
 	}else{
 		degrees=Math.abs(Math.ceil((toBeat-roll)/10)).toString();
-		message+="Fails the <b>"+abilityNames[ability.toString().toLowerCase()]+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> got <b>"+ degrees + "</b> degrees of failure.";
+		message+="Fails the <b>"+ability.toString()+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> got <b>"+ degrees + "</b> degrees of failure.";
 		sendChat(char.get("name"),message);
 		
 		
-			return false;
+		return false;
 		
 		
 	}

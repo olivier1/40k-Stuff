@@ -77,8 +77,8 @@
                 <td><input type="checkbox" name="attr_awareness1" value="20" /></td>
                 <td><input type="checkbox" name="attr_awareness2" value="10" /></td>
                 <td><input type="checkbox" name="attr_awareness3" value="10" /></td>
-                <td><button type="roll" name="roll_awareness" value="/em rolls Awareness with [[(@{awareness}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                     <input type="number" name="attr_awareness" value="floor(-20+@{awareness1}+@{awareness2}+@{awareness3}+@{per})" disabled="true"/>
+                <td><button type="roll" name="roll_awareness" value="!sheettest/@{character_name}/Awareness/@{awareness}+?{modifier|0}">
+                     <input type="number" name="attr_awareness" value="-20+@{awareness1}+@{awareness2}+@{awareness3}+@{per}" disabled="true"/>
                 </button></td>                
             </tr>
             <tr>
@@ -86,8 +86,8 @@
                 <td><input type="checkbox" name="attr_barter1" value="20" /></td>
                 <td><input type="checkbox" name="attr_barter2" value="10" /></td>
                 <td><input type="checkbox" name="attr_barter3" value="10" /></td>
-                <td><button type="roll" name="roll_Barter" value="/em rolls Barter with [[(@{Barter}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Barter" value="floor(-20+@{Barter1}+@{Barter2}+@{Barter3}+@{fel})" disabled="true"/>
+                <td><button type="roll" name="roll_Barter" value="!sheettest/@{character_name}/Barter/@{Barter}+?{modifier|0}">
+                    <input type="number" name="attr_Barter" value="-20+@{Barter1}+@{Barter2}+@{Barter3}+@{fel}" disabled="true"/>
                 </button></td> 
             </tr>
             <tr>
@@ -95,8 +95,8 @@
                 <td><input type="checkbox" name="attr_Carouse1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Carouse2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Carouse3" value="10" /></td>
-                <td><button type="roll" name="roll_Carouse" value="/em rolls Carouse with [[(@{Carouse}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Carouse" value="floor(-20+@{Carouse1}+@{t}+@{Carouse2}+@{Carouse3})" disabled="true"/>
+                <td><button type="roll" name="roll_Carouse" value="!sheettest/@{character_name}/Carouse/@{Carouse}+?{modifier|0}">
+                    <input type="number" name="attr_Carouse" value="-20+@{Carouse1}+@{t}+@{Carouse2}+@{Carouse3}" disabled="true"/>
                 </button></td> 
             </tr>
             <tr>
@@ -104,120 +104,120 @@
                 <td><input type="checkbox" name="attr_charm1" value="20" /></td>
                 <td><input type="checkbox" name="attr_charm2" value="10" /></td>
                 <td><input type="checkbox" name="attr_charm3" value="10" /></td>
-                <td><button type="roll" name="roll_Charm" value="/em rolls Charm with [[(@{Charm}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Charm" value="floor(-20+@{Charm1}+@{fel}+@{Charm2}+@{Charm3})" disabled="true"/>
+                <td><button type="roll" name="roll_Charm" value="!sheettest/@{character_name}/Charm/@{Charm}+?{modifier|0}">
+                    <input type="number" name="attr_Charm" value="-20+@{Charm1}+@{fel}+@{Charm2}+@{Charm3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Climb (S)</td>
                 <td><input type="checkbox" name="attr_Climb1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Climb2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Climb3" value="10" /></td>
-                <td><button type="roll" name="roll_Climb" value="/em rolls Climb with [[(@{Climb}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Climb" value="floor(-20+@{Climb1}+@{s}+@{Climb2}+@{Climb3})" disabled="true"/>
+                <td><button type="roll" name="roll_Climb" value="!sheettest/@{character_name}/Climb/@{Climb}+?{modifier|0}">
+                    <input type="number" name="attr_Climb" value="-20+@{Climb1}+@{s}+@{Climb2}+@{Climb3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Concealment (Ag)</td>
                 <td><input type="checkbox" name="attr_Concealment1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Concealment2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Concealment3" value="10" /></td>
-                <td><button type="roll" name="roll_Concealment" value="/em rolls Concealment with [[(@{Concealment}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Concealment" value="floor(-20+@{Concealment1}+@{ag}+@{Concealment2}+@{Concealment3})" disabled="true"/>
+                <td><button type="roll" name="roll_Concealment" value="!sheettest/@{character_name}/Concealment/@{Concealment}+?{modifier|0}">
+                    <input type="number" name="attr_Concealment" value="-20+@{Concealment1}+@{ag}+@{Concealment2}+@{Concealment3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Contortionist (Ag)</td>
                 <td><input type="checkbox" name="attr_Contortionist1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Contortionist2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Contortionist3" value="10" /></td>
-                <td><button type="roll" name="roll_Contortionist" value="/em rolls Contortionist with [[(@{Contortionist}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Contortionist" value="floor(-20+@{Contortionist1}+@{ag}+@{Contortionist2}+@{Contortionist3})" disabled="true"/>
+                <td><button type="roll" name="roll_Contortionist" value="!sheettest/@{character_name}/Contortionist/@{Contortionist}+?{modifier|0}">
+                    <input type="number" name="attr_Contortionist" value="-20+@{Contortionist1}+@{ag}+@{Contortionist2}+@{Contortionist3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Deceive (Fel)</td>
                 <td><input type="checkbox" name="attr_Deceive1" value="-20" /></td>
                 <td><input type="checkbox" name="attr_Deceive2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Deceive3" value="10" /></td>
-                <td><button type="roll" name="roll_Deceive" value="/em rolls Deceive with [[(@{Deceive}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Deceive" value="floor(-20+@{Deceive1}+@{fel}+@{Deceive2}+@{Deceive3})" disabled="true"/>
+                <td><button type="roll" name="roll_Deceive" value="!sheettest/@{character_name}/Deceive/@{Deceive}+?{modifier|0}">
+                    <input type="number" name="attr_Deceive" value="-20+@{Deceive1}+@{fel}+@{Deceive2}+@{Deceive3}" disabled="true"/>
                 </button></td>             </tr> 
             <tr>
                 <td>Disguise (Fel)</td>
                 <td><input type="checkbox" name="attr_Disguise1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Disguise2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Disguise3" value="10" /></td>
-                <td><button type="roll" name="roll_Disguise" value="/em rolls Disguise with [[(@{Disguise}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Disguise" value="floor(-20+@{Disguise1}+@{fel}+@{Disguise2}+@{Disguise3})" disabled="true"/>
+                <td><button type="roll" name="roll_Disguise" value="!sheettest/@{character_name}/Disguise/@{Disguise}+?{modifier|0}">
+                    <input type="number" name="attr_Disguise" value="-20+@{Disguise1}+@{fel}+@{Disguise2}+@{Disguise3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Dodge (Ag)</td>
                 <td><input type="checkbox" name="attr_Dodge1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Dodge2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Dodge3" value="10" /></td>
-                <td><button type="roll" name="roll_Dodge" value="/em rolls Dodge with [[(@{Dodge}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Dodge" value="floor(-20+@{Dodge1}+@{ag}+@{Dodge2}+@{Dodge3})" disabled="true"/>
+                <td><button type="roll" name="roll_Dodge" value="!sheettest/@{character_name}/Dodge/@{Dodge}+?{modifier|0}">
+                    <input type="number" name="attr_Dodge" value="-20+@{Dodge1}+@{ag}+@{Dodge2}+@{Dodge3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Evaluate (Int)</td>
                 <td><input type="checkbox" name="attr_Evaluate1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Evaluate2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Evaluate3" value="10" /></td>
-                <td><button type="roll" name="roll_Evaluate" value="/em rolls Evaluate with [[(@{Evaluate}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Evaluate" value="floor(-20+@{Evaluate1}+@{int}+@{Evaluate2}+@{Evaluate3})" disabled="true"/>
+                <td><button type="roll" name="roll_Evaluate" value="!sheettest/@{character_name}/Evaluate/@{Evaluate}+?{modifier|0}">
+                    <input type="number" name="attr_Evaluate" value="-20+@{Evaluate1}+@{int}+@{Evaluate2}+@{Evaluate3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Gamble (Int)</td>
                 <td><input type="checkbox" name="attr_Gamble1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Gamble2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Gamble3" value="10" /></td>
-                <td><button type="roll" name="roll_Gamble" value="/em rolls Gamble with [[(@{Gamble}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Gamble" value="floor(-20+@{Gamble1}+@{int}+@{Gamble2}+@{Gamble3})" disabled="true"/>
+                <td><button type="roll" name="roll_Gamble" value="!sheettest/@{character_name}/Gamble/@{Gamble}+?{modifier|0}">
+                    <input type="number" name="attr_Gamble" value="-20+@{Gamble1}+@{int}+@{Gamble2}+@{Gamble3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Inquiry (Fel)</td>
                 <td><input type="checkbox" name="attr_Inquiry1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Inquiry2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Inquiry3" value="10" /></td>
-                <td><button type="roll" name="roll_Inquiry" value="/em rolls Inquiry with [[(@{Inquiry}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Inquiry" value="floor(-20+@{Inquiry1}+@{fel}+@{Inquiry2}+@{Inquiry3})" disabled="true"/>
+                <td><button type="roll" name="roll_Inquiry" value="!sheettest/@{character_name}/Inquiry/@{Inquiry}+?{modifier|0}">
+                    <input type="number" name="attr_Inquiry" value="-20+@{Inquiry1}+@{fel}+@{Inquiry2}+@{Inquiry3}" disabled="true"/>
                 </button></td>             </tr>  
             <tr>
                 <td>Intimidate (S)</td>
                 <td><input type="checkbox" name="attr_Intimidate1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Intimidate2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Intimidate3" value="10" /></td>
-                <td><button type="roll" name="roll_Intimidate" value="/em rolls Intimidate with [[(@{Intimidate}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Intimidate" value="floor(-20+@{Intimidate1}+@{s}+@{Intimidate2}+@{Intimidate3})" disabled="true"/>
+                <td><button type="roll" name="roll_Intimidate" value="!sheettest/@{character_name}/Intimidate/@{Intimidate}+?{modifier|0}">
+                    <input type="number" name="attr_Intimidate" value="-20+@{Intimidate1}+@{s}+@{Intimidate2}+@{Intimidate3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Logic (Int)</td>
                 <td><input type="checkbox" name="attr_Logic1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Logic2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Logic3" value="10" /></td>
-                <td><button type="roll" name="roll_Logic" value="/em rolls Logic with [[(@{Logic}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Logic" value="floor(-20+@{Logic1}+@{int}+@{Logic2}+@{Logic3})" disabled="true"/>
+                <td><button type="roll" name="roll_Logic" value="!sheettest/@{character_name}/Logic/@{Logic}+?{modifier|0}">
+                    <input type="number" name="attr_Logic" value="-20+@{Logic1}+@{int}+@{Logic2}+@{Logic3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Scrutiny (Per)</td>
                 <td><input type="checkbox" name="attr_Scrutiny1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Scrutiny2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Scrutiny3" value="10" /></td>
-                <td><button type="roll" name="roll_Scrutiny" value="/em rolls Scrutiny with [[(@{Scrutiny}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Scrutiny" value="floor(-20+@{Scrutiny1}+@{per}+@{Scrutiny2}+@{Scrutiny3})" disabled="true"/>
+                <td><button type="roll" name="roll_Scrutiny" value="!sheettest/@{character_name}/Scrutiny/@{Scrutiny}+?{modifier|0}">
+                    <input type="number" name="attr_Scrutiny" value="-20+@{Scrutiny1}+@{per}+@{Scrutiny2}+@{Scrutiny3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Search (Per)</td>
                 <td><input type="checkbox" name="attr_Search1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Search2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Search3" value="10" /></td>
-                <td><button type="roll" name="roll_Search" value="/em rolls Search with [[(@{Search}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Search" value="floor(-20+@{Search1}+@{per}+@{Search2}+@{Search3})" disabled="true"/>
+                <td><button type="roll" name="roll_Search" value="!sheettest/@{character_name}/Search/@{Search}+?{modifier|0}">
+                    <input type="number" name="attr_Search" value="-20+@{Search1}+@{per}+@{Search2}+@{Search3}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Silent Move (Ag)</td>
                 <td><input type="checkbox" name="attr_SilentMove1" value="20" /></td>
                 <td><input type="checkbox" name="attr_SilentMove2" value="10" /></td>
                 <td><input type="checkbox" name="attr_SilentMove3" value="10" /></td>
-                <td><button type="roll" name="roll_SilentMove" value="/em rolls Silent Move with [[(@{SilentMove}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_SilentMove" value="floor(-20+@{SilentMove1}+@{ag}+@{SilentMove2}+@{SilentMove3})" disabled="true"/>
+                <td><button type="roll" name="roll_SilentMove" value="!sheettest/@{character_name}/Silent Move/@{SilentMove}+?{modifier|0}">
+                    <input type="number" name="attr_SilentMove" value="-20+@{SilentMove1}+@{ag}+@{SilentMove2}+@{SilentMove3}" disabled="true"/>
                 </button></td>             </tr>
 
             <tr>
@@ -225,8 +225,8 @@
                 <td><input type="checkbox" name="attr_Swim1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Swim2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Swim3" value="10" /></td>
-                <td><button type="roll" name="roll_Swim" value="/em rolls Swim with [[(@{Swim}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_Swim" value="floor(-20+@{Swim1}+@{s}+@{Swim2}+@{Swim3})" disabled="true"/>
+                <td><button type="roll" name="roll_Swim" value="!sheettest/@{character_name}/Swim/@{Swim}?{modifier|0}">
+                    <input type="number" name="attr_Swim" value="-20+@{Swim1}+@{s}+@{Swim2}+@{Swim3}" disabled="true"/>
                 </button></td>             </tr>             
         </table>
         
@@ -255,8 +255,8 @@
                 <td><input type="checkbox" name="attr_basicskillbox1" value="20" /></td>
                 <td><input type="checkbox" name="attr_basicskillbox2" value="10" /></td>
                 <td><input type="checkbox" name="attr_basicskillbox3" value="10" /></td>
-                <td><button type="roll" name="roll_basicskill" value="/em rolls @{basicskillname} with [[(@{basicskill}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_basicskill" value="floor(-20+@{basicskillbox1}+@{basicskillcharacteristic}+@{basicskillbox2}+@{basicskillbox3})" disabled="true"/>
+                <td><button type="roll" name="roll_basicskill" value="!sheettest/@{character_name}/@{basicskillname}/@{basicskill}+?{modifier|0}">
+                    <input type="number" name="attr_basicskill" value="-20+@{basicskillbox1}+@{basicskillcharacteristic}+@{basicskillbox2}+@{basicskillbox3}" disabled="true"/>
                 </button></td>             </table></tr> 
         </fieldset>
         
@@ -285,31 +285,31 @@
     <!-- Mid Column / Characteristics -->
     <div class="sheet-col sheet-characteristics">
         <h3>Characteristics</h3>
-        <button type="roll" name="roll_ws" value="/me rolls a Weapon Skill check with [[(@{WS}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Weapon Skill (WS)</label></button><br>
+        <button type="roll" name="roll_ws" value="!sheettest/@{character_name}/Weapon Skill/@{ws}+?{modifier|0}"><label>Weapon Skill (WS)</label></button><br>
                <input type="text" name="attr_ws" value="0" />
                <input type="hidden" name="attr_wsb" value="floor(@{WS}/10)" disabled="true">
-        <button type="roll" name="roll_bs" value="/me rolls a Ballistic Skill check with [[(@{BS}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Ballistic Skill (BS)</label></button><br>
+        <button type="roll" name="roll_bs" value="!sheettest/@{character_name}/Ballistic Skill/@{bs}+?{modifier|0}"><label>Ballistic Skill (BS)</label></button><br>
                <input type="text" name="attr_bs" value="0" /> 
                <input type="hidden" name="attr_bsb" value="floor(@{BS}/10)" disabled="true">
-        <button type="roll" name="roll_s" value="/me rolls a Strength check with [[(@{S}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Strength (S)</label></button><br>
+        <button type="roll" name="roll_s" value="!sheettest/@{character_name}/Strength/@{s}+?{modifier|0}"><label>Strength (S)</label></button><br>
                <input type="text" name="attr_s" value="0" /> 
                <input type="hidden" name="attr_sb" value="floor(@{S}/10)" disabled="true">
-        <button type="roll" name="roll_t" value="/me rolls a Toughness check with [[(@{t}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Toughness (T)</label></button><br>
+        <button type="roll" name="roll_t" value="!sheettest/@{character_name}/Toughness/@{t}+?{modifier|0}"><label>Toughness (T)</label></button><br>
                <input type="text" name="attr_t" value="0" />   
                <input type="hidden" name="attr_tb" value="floor(@{T}/10)" disabled="true">      
-        <button type="roll" name="roll_ag" value="/me rolls an Agility check with [[(@{Ag}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Agility (Ag)</label></button><br>
+        <button type="roll" name="roll_ag" value="!sheettest/@{character_name}/Agility/@{ag}+?{modifier|0}"><label>Agility (Ag)</label></button><br>
                <input type="text" name="attr_ag" value="0" />
                <input type="hidden" name="attr_agb" value="floor(@{Ag}/10)" disabled="true">
-        <button type="roll" name="roll_int" value="/me rolls an Intelligence check with [[(@{Int}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Intelligence (Int)</label></button><br>
+        <button type="roll" name="roll_int" value="!sheettest/@{character_name}/Intelligence/@{int}+?{modifier|0}"><label>Intelligence (Int)</label></button><br>
                <input type="text" name="attr_int" value="0" /> 
                <input type="hidden" name="attr_intb" value="floor(@{Int}/10)" disabled="true">
-        <button type="roll" name="roll_Per" value="/me rolls a Perception check with [[(@{Per}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Perception (Per)</label></button><br>
+        <button type="roll" name="roll_Per" value="!sheettest/@{character_name}/Perception/@{per}+?{modifier|0}"><label>Perception (Per)</label></button><br>
            	<input type="text" name="attr_per" value="0" />
            	<input type="hidden" name="attr_perb" value="floor(@{Per}/10)" disabled="true">
-        <button type="roll" name="roll_Wp" value="/me rolls a Willpower check with [[(@{Wp}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Willpower (Wp)</label></button><br>
+        <button type="roll" name="roll_Wp" value="!sheettest/@{character_name}/Willpower/@{wp}+?{modifier|0}"><label>Willpower (Wp)</label></button><br>
            	<input type="text" name="attr_wp" value="0" />
            	<input type="hidden" name="attr_wpb" value="floor(@{WP}/10)" disabled="true">
-        <button type="roll" name="roll_Fel" value="/me rolls a Fellowship check with [[(@{Fel}+?{Modifier|0}-1d100)/10]] degree(s) of success!"><label>Fellowship (Fel)</label></button><br>
+        <button type="roll" name="roll_Fel" value="!sheettest/@{character_name}/Fellowship/@{fel}+?{modifier|0}"><label>Fellowship (Fel)</label></button><br>
            	<input type="text" name="attr_fel" value="0" />  
            	<input type="hidden" name="attr_felb" value="floor(@{Fel}/10)" disabled="true">                                                                                                       
     </div>
@@ -331,8 +331,8 @@
                 <td><input type="checkbox" name="attr_speaklow1" value="20" /></td>
                 <td><input type="checkbox" name="attr_speaklow2" value="10" /></td>
                 <td><input type="checkbox" name="attr_speaklow3" value="10" /></td>
-                <td><button type="roll" name="roll_speaklow" value="/em rolls Speak Language (Low Gothic) with [[(@{speaklow}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_speaklow" value="floor(-20+@{speaklow1}+@{int}+@{speaklow2}+@{speaklow3})" disabled="true"/>
+                <td><button type="roll" name="roll_speaklow" value="!sheettest/@{character_name}/Speak Low Gothic/@{speaklow}+?{modifier|0}">
+                    <input type="number" name="attr_speaklow" value="-20+@{speaklow1}+@{int}+@{speaklow2}+@{speaklow3}" disabled="true"/>
                 </button></td>  
             </tr> 
         </table>    
@@ -361,8 +361,8 @@
                 <td><input type="checkbox" name="attr_advancedskillbox1" value="20" /></td>
                 <td><input type="checkbox" name="attr_advancedskillbox2" value="10" /></td>
                 <td><input type="checkbox" name="attr_advancedskillbox3" value="10" /></td>
-                <td><button type="roll" name="roll_advancedskill" value="/em rolls @{advancedskillname} with [[(@{advancedskill}+?{Modifier|0}-1d100)/10]] degree(s) of success!">
-                    <input type="number" name="attr_advancedskill" value="floor(-20+@{advancedskillbox1}+@{advancedskillcharacteristic}+@{advancedskillbox2}+@{advancedskillbox3})" disabled="true"/>
+                <td><button type="roll" name="roll_advancedskill" value="!sheettest/@{character_name}/@{advancedskillname}/@{advancedskill}+?{modifier|0}">
+                    <input type="number" name="attr_advancedskill" value="-20+@{advancedskillbox1}+@{advancedskillcharacteristic}+@{advancedskillbox2}+@{advancedskillbox3}" disabled="true"/>
                 </button></td>             </table></tr> 
         </fieldset>
         
