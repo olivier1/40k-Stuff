@@ -70,6 +70,7 @@
                 <th></th>
                 <th>10</th>
                 <th>20</th>
+                <th>30</th>
                 <th>Roll</th>
             </tr>        
             <tr>
@@ -77,8 +78,9 @@
                 <td><input type="checkbox" name="attr_awareness1" value="20" /></td>
                 <td><input type="checkbox" name="attr_awareness2" value="10" /></td>
                 <td><input type="checkbox" name="attr_awareness3" value="10" /></td>
+                <td><input type="checkbox" name="attr_awareness4" value="10" /></td>
                 <td><button type="roll" name="roll_awareness" value="!sheettest/@{character_name}/Awareness/@{awareness}+?{modifier|0}">
-                     <input type="number" name="attr_awareness" value="-20+@{awareness1}+@{awareness2}+@{awareness3}+@{per}" disabled="true"/>
+                     <input type="number" name="attr_awareness" value="-20+@{awareness1}+@{awareness2}+@{awareness3}+@{per}+@{awareness4}" disabled="true"/>
                 </button></td>                
             </tr>
             <tr>
@@ -86,8 +88,9 @@
                 <td><input type="checkbox" name="attr_barter1" value="20" /></td>
                 <td><input type="checkbox" name="attr_barter2" value="10" /></td>
                 <td><input type="checkbox" name="attr_barter3" value="10" /></td>
+                <td><input type="checkbox" name="attr_barter4" value="10" /></td>
                 <td><button type="roll" name="roll_Barter" value="!sheettest/@{character_name}/Barter/@{Barter}+?{modifier|0}">
-                    <input type="number" name="attr_Barter" value="-20+@{Barter1}+@{Barter2}+@{Barter3}+@{fel}" disabled="true"/>
+                    <input type="number" name="attr_Barter" value="-20+@{Barter1}+@{Barter2}+@{Barter3}+@{fel}+@{Barter4}" disabled="true"/>
                 </button></td> 
             </tr>
             <tr>
@@ -95,8 +98,9 @@
                 <td><input type="checkbox" name="attr_Carouse1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Carouse2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Carouse3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Carouse4" value="10" /></td>
                 <td><button type="roll" name="roll_Carouse" value="!sheettest/@{character_name}/Carouse/@{Carouse}+?{modifier|0}">
-                    <input type="number" name="attr_Carouse" value="-20+@{Carouse1}+@{t}+@{Carouse2}+@{Carouse3}" disabled="true"/>
+                    <input type="number" name="attr_Carouse" value="-20+@{Carouse1}+@{t}+@{Carouse2}+@{Carouse3}+@{Carouse4}" disabled="true"/>
                 </button></td> 
             </tr>
             <tr>
@@ -104,120 +108,135 @@
                 <td><input type="checkbox" name="attr_charm1" value="20" /></td>
                 <td><input type="checkbox" name="attr_charm2" value="10" /></td>
                 <td><input type="checkbox" name="attr_charm3" value="10" /></td>
+                <td><input type="checkbox" name="attr_charm4" value="10" /></td>
                 <td><button type="roll" name="roll_Charm" value="!sheettest/@{character_name}/Charm/@{Charm}+?{modifier|0}">
-                    <input type="number" name="attr_Charm" value="-20+@{Charm1}+@{fel}+@{Charm2}+@{Charm3}" disabled="true"/>
+                    <input type="number" name="attr_Charm" value="-20+@{Charm1}+@{fel}+@{Charm2}+@{Charm3}+@{Charm4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Climb (S)</td>
                 <td><input type="checkbox" name="attr_Climb1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Climb2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Climb3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Climb4" value="10" /></td>
                 <td><button type="roll" name="roll_Climb" value="!sheettest/@{character_name}/Climb/@{Climb}+?{modifier|0}">
-                    <input type="number" name="attr_Climb" value="-20+@{Climb1}+@{s}+@{Climb2}+@{Climb3}" disabled="true"/>
+                    <input type="number" name="attr_Climb" value="-20+@{Climb1}+@{s}+@{Climb2}+@{Climb3}+@{Climb4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Concealment (Ag)</td>
                 <td><input type="checkbox" name="attr_Concealment1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Concealment2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Concealment3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Concealment4" value="10" /></td>
                 <td><button type="roll" name="roll_Concealment" value="!sheettest/@{character_name}/Concealment/@{Concealment}+?{modifier|0}">
-                    <input type="number" name="attr_Concealment" value="-20+@{Concealment1}+@{ag}+@{Concealment2}+@{Concealment3}" disabled="true"/>
+                    <input type="number" name="attr_Concealment" value="-20+@{Concealment1}+@{ag}+@{Concealment2}+@{Concealment3}+@{Concealment4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Contortionist (Ag)</td>
                 <td><input type="checkbox" name="attr_Contortionist1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Contortionist2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Contortionist3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Contortionist4" value="10" /></td>
                 <td><button type="roll" name="roll_Contortionist" value="!sheettest/@{character_name}/Contortionist/@{Contortionist}+?{modifier|0}">
-                    <input type="number" name="attr_Contortionist" value="-20+@{Contortionist1}+@{ag}+@{Contortionist2}+@{Contortionist3}" disabled="true"/>
+                    <input type="number" name="attr_Contortionist" value="-20+@{Contortionist1}+@{ag}+@{Contortionist2}+@{Contortionist3}+@{Contortionist4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Deceive (Fel)</td>
                 <td><input type="checkbox" name="attr_Deceive1" value="-20" /></td>
                 <td><input type="checkbox" name="attr_Deceive2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Deceive3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Deceive4" value="10" /></td>
                 <td><button type="roll" name="roll_Deceive" value="!sheettest/@{character_name}/Deceive/@{Deceive}+?{modifier|0}">
-                    <input type="number" name="attr_Deceive" value="-20+@{Deceive1}+@{fel}+@{Deceive2}+@{Deceive3}" disabled="true"/>
+                    <input type="number" name="attr_Deceive" value="-20+@{Deceive1}+@{fel}+@{Deceive2}+@{Deceive3}+@{Deceive4}" disabled="true"/>
                 </button></td>             </tr> 
             <tr>
                 <td>Disguise (Fel)</td>
                 <td><input type="checkbox" name="attr_Disguise1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Disguise2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Disguise3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Disguise4" value="10" /></td>
                 <td><button type="roll" name="roll_Disguise" value="!sheettest/@{character_name}/Disguise/@{Disguise}+?{modifier|0}">
-                    <input type="number" name="attr_Disguise" value="-20+@{Disguise1}+@{fel}+@{Disguise2}+@{Disguise3}" disabled="true"/>
+                    <input type="number" name="attr_Disguise" value="-20+@{Disguise1}+@{fel}+@{Disguise2}+@{Disguise3}+@{Disguise4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Dodge (Ag)</td>
                 <td><input type="checkbox" name="attr_Dodge1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Dodge2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Dodge3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Dodge4" value="10" /></td>
                 <td><button type="roll" name="roll_Dodge" value="!sheettest/@{character_name}/Dodge/@{Dodge}+?{modifier|0}">
-                    <input type="number" name="attr_Dodge" value="-20+@{Dodge1}+@{ag}+@{Dodge2}+@{Dodge3}" disabled="true"/>
+                    <input type="number" name="attr_Dodge" value="-20+@{Dodge1}+@{ag}+@{Dodge2}+@{Dodge3}+@{Dodge4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Evaluate (Int)</td>
                 <td><input type="checkbox" name="attr_Evaluate1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Evaluate2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Evaluate3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Evaluate4" value="10" /></td>
                 <td><button type="roll" name="roll_Evaluate" value="!sheettest/@{character_name}/Evaluate/@{Evaluate}+?{modifier|0}">
-                    <input type="number" name="attr_Evaluate" value="-20+@{Evaluate1}+@{int}+@{Evaluate2}+@{Evaluate3}" disabled="true"/>
+                    <input type="number" name="attr_Evaluate" value="-20+@{Evaluate1}+@{int}+@{Evaluate2}+@{Evaluate3}+@{Evaluate4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Gamble (Int)</td>
                 <td><input type="checkbox" name="attr_Gamble1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Gamble2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Gamble3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Gamble4" value="10" /></td>
                 <td><button type="roll" name="roll_Gamble" value="!sheettest/@{character_name}/Gamble/@{Gamble}+?{modifier|0}">
-                    <input type="number" name="attr_Gamble" value="-20+@{Gamble1}+@{int}+@{Gamble2}+@{Gamble3}" disabled="true"/>
+                    <input type="number" name="attr_Gamble" value="-20+@{Gamble1}+@{int}+@{Gamble2}+@{Gamble3}+@{Gamble4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Inquiry (Fel)</td>
                 <td><input type="checkbox" name="attr_Inquiry1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Inquiry2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Inquiry3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Inquiry4" value="10" /></td>
                 <td><button type="roll" name="roll_Inquiry" value="!sheettest/@{character_name}/Inquiry/@{Inquiry}+?{modifier|0}">
-                    <input type="number" name="attr_Inquiry" value="-20+@{Inquiry1}+@{fel}+@{Inquiry2}+@{Inquiry3}" disabled="true"/>
+                    <input type="number" name="attr_Inquiry" value="-20+@{Inquiry1}+@{fel}+@{Inquiry2}+@{Inquiry3}+@{Inquiry4}" disabled="true"/>
                 </button></td>             </tr>  
             <tr>
                 <td>Intimidate (S)</td>
                 <td><input type="checkbox" name="attr_Intimidate1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Intimidate2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Intimidate3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Intimidate4" value="10" /></td>
                 <td><button type="roll" name="roll_Intimidate" value="!sheettest/@{character_name}/Intimidate/@{Intimidate}+?{modifier|0}">
-                    <input type="number" name="attr_Intimidate" value="-20+@{Intimidate1}+@{s}+@{Intimidate2}+@{Intimidate3}" disabled="true"/>
+                    <input type="number" name="attr_Intimidate" value="-20+@{Intimidate1}+@{s}+@{Intimidate2}+@{Intimidate3}+@{Intimidate4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Logic (Int)</td>
                 <td><input type="checkbox" name="attr_Logic1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Logic2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Logic3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Logic4" value="10" /></td>
                 <td><button type="roll" name="roll_Logic" value="!sheettest/@{character_name}/Logic/@{Logic}+?{modifier|0}">
-                    <input type="number" name="attr_Logic" value="-20+@{Logic1}+@{int}+@{Logic2}+@{Logic3}" disabled="true"/>
+                    <input type="number" name="attr_Logic" value="-20+@{Logic1}+@{int}+@{Logic2}+@{Logic3}+@{Logic4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Scrutiny (Per)</td>
                 <td><input type="checkbox" name="attr_Scrutiny1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Scrutiny2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Scrutiny3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Scrutiny4" value="10" /></td>
                 <td><button type="roll" name="roll_Scrutiny" value="!sheettest/@{character_name}/Scrutiny/@{Scrutiny}+?{modifier|0}">
-                    <input type="number" name="attr_Scrutiny" value="-20+@{Scrutiny1}+@{per}+@{Scrutiny2}+@{Scrutiny3}" disabled="true"/>
+                    <input type="number" name="attr_Scrutiny" value="-20+@{Scrutiny1}+@{per}+@{Scrutiny2}+@{Scrutiny3}+@{Scrutiny4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Search (Per)</td>
                 <td><input type="checkbox" name="attr_Search1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Search2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Search3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Search4" value="10" /></td>
                 <td><button type="roll" name="roll_Search" value="!sheettest/@{character_name}/Search/@{Search}+?{modifier|0}">
-                    <input type="number" name="attr_Search" value="-20+@{Search1}+@{per}+@{Search2}+@{Search3}" disabled="true"/>
+                    <input type="number" name="attr_Search" value="-20+@{Search1}+@{per}+@{Search2}+@{Search3}+@{Search4}" disabled="true"/>
                 </button></td>             </tr>
             <tr>
                 <td>Silent Move (Ag)</td>
                 <td><input type="checkbox" name="attr_SilentMove1" value="20" /></td>
                 <td><input type="checkbox" name="attr_SilentMove2" value="10" /></td>
                 <td><input type="checkbox" name="attr_SilentMove3" value="10" /></td>
+                <td><input type="checkbox" name="attr_SilentMove4" value="10" /></td>
                 <td><button type="roll" name="roll_SilentMove" value="!sheettest/@{character_name}/Silent Move/@{SilentMove}+?{modifier|0}">
-                    <input type="number" name="attr_SilentMove" value="-20+@{SilentMove1}+@{ag}+@{SilentMove2}+@{SilentMove3}" disabled="true"/>
+                    <input type="number" name="attr_SilentMove" value="-20+@{SilentMove1}+@{ag}+@{SilentMove2}+@{SilentMove3}+@{SilentMove4}" disabled="true"/>
                 </button></td>             </tr>
 
             <tr>
@@ -225,8 +244,9 @@
                 <td><input type="checkbox" name="attr_Swim1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Swim2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Swim3" value="10" /></td>
+                <td><input type="checkbox" name="attr_Swim4" value="10" /></td>
                 <td><button type="roll" name="roll_Swim" value="!sheettest/@{character_name}/Swim/@{Swim}?{modifier|0}">
-                    <input type="number" name="attr_Swim" value="-20+@{Swim1}+@{s}+@{Swim2}+@{Swim3}" disabled="true"/>
+                    <input type="number" name="attr_Swim" value="-20+@{Swim1}+@{s}+@{Swim2}+@{Swim3}+@{Swim4}" disabled="true"/>
                 </button></td>             </tr>             
         </table>
         
@@ -255,12 +275,13 @@
                 <td><input type="checkbox" name="attr_basicskillbox1" value="20" /></td>
                 <td><input type="checkbox" name="attr_basicskillbox2" value="10" /></td>
                 <td><input type="checkbox" name="attr_basicskillbox3" value="10" /></td>
+                <td><input type="checkbox" name="attr_basicskillbox4" value="10" /></td>
                 <td><button type="roll" name="roll_basicskill" value="!sheettest/@{character_name}/@{basicskillname}/@{basicskill}+?{modifier|0}">
-                    <input type="number" name="attr_basicskill" value="-20+@{basicskillbox1}+@{basicskillcharacteristic}+@{basicskillbox2}+@{basicskillbox3}" disabled="true"/>
+                    <input type="number" name="attr_basicskill" value="-20+@{basicskillbox1}+@{basicskillcharacteristic}+@{basicskillbox2}+@{basicskillbox3}+@{basicskillbox4}" disabled="true"/>
                 </button></td>             </table></tr> 
         </fieldset>
         
-        <h3>Talents & Traits</h3>
+        <h3>Talents</h3>
         <div class="sheet-row">
             <div class="sheet-item sheet-tiny" style="width:16%;"><input type="text" name="attr_weapontrainingclass"/></div>
             <div class="sheet-item sheet-large"><label> Weapon Training </label></div>
@@ -324,6 +345,7 @@
                 <th></th>
                 <th>10</th>
                 <th>20</th>
+                <th>30</th>
                 <th>Roll</th>
             </tr>         
         	<tr>
@@ -331,8 +353,9 @@
                 <td><input type="checkbox" name="attr_speaklow1" value="20" /></td>
                 <td><input type="checkbox" name="attr_speaklow2" value="10" /></td>
                 <td><input type="checkbox" name="attr_speaklow3" value="10" /></td>
+                <td><input type="checkbox" name="attr_speaklow4" value="10" /></td>
                 <td><button type="roll" name="roll_speaklow" value="!sheettest/@{character_name}/Speak Low Gothic/@{speaklow}+?{modifier|0}">
-                    <input type="number" name="attr_speaklow" value="-20+@{speaklow1}+@{int}+@{speaklow2}+@{speaklow3}" disabled="true"/>
+                    <input type="number" name="attr_speaklow" value="-20+@{speaklow1}+@{int}+@{speaklow2}+@{speaklow3}+@{speaklow4}" disabled="true"/>
                 </button></td>  
             </tr> 
         </table>    
@@ -361,8 +384,9 @@
                 <td><input type="checkbox" name="attr_advancedskillbox1" value="20" /></td>
                 <td><input type="checkbox" name="attr_advancedskillbox2" value="10" /></td>
                 <td><input type="checkbox" name="attr_advancedskillbox3" value="10" /></td>
+                <td><input type="checkbox" name="attr_advancedskillbox4" value="10" /></td>
                 <td><button type="roll" name="roll_advancedskill" value="!sheettest/@{character_name}/@{advancedskillname}/@{advancedskill}+?{modifier|0}">
-                    <input type="number" name="attr_advancedskill" value="-20+@{advancedskillbox1}+@{advancedskillcharacteristic}+@{advancedskillbox2}+@{advancedskillbox3}" disabled="true"/>
+                    <input type="number" name="attr_advancedskill" value="-20+@{advancedskillbox1}+@{advancedskillcharacteristic}+@{advancedskillbox2}+@{advancedskillbox3}+@{advancedskillbox4}" disabled="true"/>
                 </button></td>             </table></tr> 
         </fieldset>
         
@@ -420,10 +444,10 @@
         <h3>Mutation</h3>
             <textarea name="attr_mutations" style="width:95%; margin:auto; height:75px;"></textarea>
             
-        <h3>Talents & Traits</h3>  
-        <input type="text" name="attr_fixtalent" />
-        <fieldset class="repeating_talents">
-            <input type="text" name="attr_reptalent" />
+        <h3>Traits</h3>  
+        <input type="text" name="attr_fixtrait" />
+        <fieldset class="repeating_traits">
+            <input type="text" name="attr_reptrait" />
         </fieldset>            
         
                
