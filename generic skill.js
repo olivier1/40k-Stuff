@@ -38,14 +38,8 @@ on("chat:message", function(msg) {
 			
 		var stat=param[2];
 
-		var modifier=param[3].split("+");
-		log(modifier);
-				
-		var modifierNumber=0;
-		for(var i=0; i<modifier.length;i++){
-			
-			modifierNumber+=parseInt(modifier[i]);
-		}
+		var modifierNumber=eval(param[3])
+		
 		
 		var shooterChar=shooterCharObject[0];
 		

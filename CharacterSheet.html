@@ -141,7 +141,7 @@
                 </button></td>             </tr>
             <tr>
                 <td>Deceive (Fel)</td>
-                <td><input type="checkbox" name="attr_Deceive1" value="-20" /></td>
+                <td><input type="checkbox" name="attr_Deceive1" value="20" /></td>
                 <td><input type="checkbox" name="attr_Deceive2" value="10" /></td>
                 <td><input type="checkbox" name="attr_Deceive3" value="10" /></td>
                 <td><input type="checkbox" name="attr_Deceive4" value="10" /></td>
@@ -395,24 +395,35 @@
         <!-- ATTENTION PSYKERS AHEAD! -->
         
         <h3>Psychic Powers</h3>
+            <div class="sheet-row">
+
+                <div class="sheet-item" style="width:37.5%"><label>Psy Rating</label></div>
+                <div class="sheet-item sheet-tiny"><input type="text" name="attr_psyrating" /></div>
+                 
+                    <input type="hidden" name="attr_unf" value="@{wp}+5*@{psyrating}" disabled="true">
+                
+                <button  style="width:72px" type="roll" name="roll_unfetteredpower"  value="!sheettest/@{character_name}/Unfettered Power/@{unf}+?{modifier|0}">
+                        <label>Unfettered Power</label>
+                    </button>
+                
+               
+                    <input type="hidden" name="attr_push" value="@{wp}+5*(@{psyrating}+3)" disabled="true">
+                <button style="width:36px" type="roll" name="roll_unfetteredpower" value="!sheettest/@{character_name}/Pushed Power/@{push}+?{modifier|0}">
+                        <label>Push</label>
+                    </button>
+                
+            </div>
         	<div class="sheet-row">
             	<div class="sheet-item" style="width:37.5%"><label>Psychic Discipline</label></div>
                 <div class="sheet-item sheet-morebig"><input type="text" name="attr_psychicdiscipline" /></div>
-                <div class="sheet-item sheet-puny">
-                	<button type="roll" name="roll_psycicpower" value="/me draws on the power of the Warp!\n/r ((?{Psy Rating|1}d10)+[[floor(@{wp}/10)]]+?{Modifier|0})">
-                    	<label>Psy</label>
-                    </button>
-                </div>
+               
+                	
             </div>
             <fieldset class="repeating_psychicdiscipline">
             	<div class="sheet-row">
                     <div class="sheet-item" style="width:37.5%"><label>Psychic Discipline</label></div>
                     <div class="sheet-item sheet-morebig"><input type="text" name="attr_reppsychicdiscipline" /></div>
-                    <div class="sheet-item sheet-puny">
-                        <button type="roll" name="roll_reppsycicpower" value="/me draws on the power of the Warp!\n/r ((?{Psy Rating|1}d10)+[[floor(@{wp}/10)]]+?{Modifier|0})">
-                            <label>Psy</label>
-                        </button>
-                    </div>                    
+                                       
                 </div>                
             </fieldset>
             <!-- Minor Powers -->         
@@ -420,11 +431,7 @@
             	<div class="sheet-row">
                 	<div class="sheet-item sheet-large"><label>Minor Power</label></div>
                     <div class="sheet-item sheet-morebig sheet-brackets"><input type="text" name="attr_repminorpsychicpower" /></div>
-                    <div class="sheet-item sheet-puny">
-                        <button type="roll" name="roll_repminorpower" value="/me draws on the power of the Warp and casts @{repminorpsychicpower}! (Threshold: [[?{Threshold|7}]])\n/r ((?{Psy Rating|1}d10)+[[floor(@{wp}/10)]]+?{Modifier|0})">
-                            <label>Psy</label>
-                        </button>
-                    </div>                      
+                                          
                 </div>
             </fieldset> 
             <!-- Discipline Powers -->          
@@ -432,11 +439,7 @@
                 <div class="sheet-row">
                 	<div class="sheet-item sheet-large"><label>Discipline Power</label></div>
                     <div class="sheet-item sheet-morebig sheet-brackets"><input type="text" name="attr_repdisciplinepsychicpower" /></div>
-                    <div class="sheet-item sheet-puny">
-                        <button type="roll" name="roll_repdisciplinepower" value="/me draws on the power of the Warp and casts @{repdisciplinepsychicpower}! (Threshold: [[?{Threshold|7}]])\n/r ((?{Psy Rating|1}d10)+[[floor(@{wp}/10)]]+?{Modifier|0})">
-                            <label>Psy</label>
-                        </button>
-                    </div>                     
+                                       
                 </div>
             </fieldset>  
             
@@ -475,11 +478,14 @@
                                 value="/me does [[{@{meleeweapondamage}+(floor(@{s}/10)), (@{meleeweapontearing}*(@{meleeweapondamage}+(floor(@{s}/10))))}kh1]] @{meleeweapontype} damage!">
                             <label>Damage:</label>
                         </button></div>
-                    <div class="sheet-item sheet-small"><input type="text" name="attr_meleeweapondamage" /></div>
-                    <div class="sheet-item sheet-little"><label style="font-size:0.9em;">Tearing</label></div>
-                    <div class="sheet-item sheet-puny"><input type="checkbox" name="attr_meleeweapontearing" value="1" /></div>                     
+                    <div class="sheet-item sheet-small"><input type="text" name="attr_meleeweapondamage" /></div>                     
                     <div class="sheet-item sheet-little"><label>Type:</label></div>
-                    <div class="sheet-item sheet-small"><input type="text" name="attr_meleeweapontype" /></div> 
+                    <div class="sheet-item sheet-med"><select name="attr_meeleweapontype" class="charaselect">
+                                <option value="Energy">Energy</option>
+                                <option value="Impact">Impact</option>
+                                <option value="Rending">Rending</option>
+                                <option value="Explosive">Explosive</option>
+                            </select></div> 
                     <div class="sheet-item sheet-puny"><label>Pen:</label></div>
                     <div class="sheet-item sheet-puny"><input type="text" name="attr_meleeweaponpen" value="0" /></div>
                 </div>          
@@ -569,10 +575,13 @@
                             <label>Damage:</label>
                         </button></div>
                     <div class="sheet-item sheet-small"><input type="text" name="attr_rangedweapondamage" /></div>
-                    <div class="sheet-item sheet-little"><label style="font-size:0.9em;">Tearing</label></div>
-                    <div class="sheet-item sheet-puny"><input type="checkbox" name="attr_rangedweapontearing" value="1" /></div> 
                     <div class="sheet-item sheet-little"><label>Type:</label></div>
-                    <div class="sheet-item sheet-small"><input type="text" name="attr_rangedweapontype" /></div>
+                    <div class="sheet-item sheet-med"><select name="attr_rangedweapontype" class="charaselect">
+                                <option value="Energy">Energy</option>
+                                <option value="Impact">Impact</option>
+                                <option value="Rending">Rending</option>
+                                <option value="Explosive">Explosive</option>
+                            </select></div>
                     <div class="sheet-item sheet-puny"><label>Pen:</label></div>
                     <div class="sheet-item sheet-puny"><input type="text" name="attr_rangedweaponpen" value="0" /></div>
                 </div>
@@ -661,7 +670,7 @@
                     <p>Current</p> <input type="text" name="attr_wounds" />
                 </div>
                 <div class="sheet-innerfooter  sheet-armourblock">
-                    <p style="text-transform:uppercase;">Fatigue (Max = TB)</p> <input type="text" name="attr_woundsfatigue" />
+                    <p style="text-transform:uppercase;">Fatigue </p> <input class="sheet-item sheet-tiny" type="text" name="attr_fatigue" value="0" /> <span style="text-transform:uppercase;">/</span><input class="sheet-item sheet-tiny" type="text" name="attr_fatigue_max" value="@{tb}" />
                 </div>              
             </div>
             <div class="sheet-footer sheet-tablecell" style="width:18%;">
