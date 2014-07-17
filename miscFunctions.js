@@ -22,7 +22,7 @@ function getHitTable(){
 	case "LeftLeg":
 		return leftLegHits;
 		break;
-	case "RighttLeg":
+	case "RightLeg":
 	return rightLegHits;
 	break;
 	default:
