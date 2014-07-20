@@ -4,7 +4,7 @@ var rightArmHits=["RightArm","RightArm","Body","Head","Body","RightArm"];
 var leftArmHits=["LeftArm","LeftArm","Body","Head","Body","LeftArm"];
 var bodyHits=["Body","Body","LeftArm","Head","RightArm","Body"];
 var leftLegHits=["LeftLeg","LeftLeg","Body","LeftArm","Head","Body"];
-var rightlegHits=["RightLeg","RightLeg","Body","RightArm","Head","Body"];
+var rightLegHits=["RightLeg","RightLeg","Body","RightArm","Head","Body"];
 function getHitTable(){
 	switch(hitSpot){
 	case "Head":
