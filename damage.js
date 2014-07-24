@@ -27,6 +27,7 @@ on("chat:message", function(msg) {
 });
 on("chat:message", function(msg) {
 	if(msg.type=="api" && msg.content.indexOf('!areadamage')!==-1){
+		hitSpot="Body";
 		var param= msg.content.split(" ");
 		_.each(msg.selected, function(selected) {
 			var obj = getObj("graphic", selected._id);
