@@ -100,7 +100,7 @@ function damage(param){
 	var targetName=targetToken.get("name");
 	var damage=parseInt(bonusNumber);
 	if(speschuls["flame"]){catchFire(targetToken);}
-	if(speschuls["toxic"]>-1){toxicTest(targetToken, speschuls["toxic"], damageType);}
+	
 	if(speschuls["snare"]>-1){snareTest(targetToken, speschuls["snare"]);}
 	var fury=false;
 	var furynumber=10;
@@ -203,6 +203,7 @@ function damage(param){
 	hp=hpDamage(targetToken, damage);
 
 	sendChat(shooterName, 'damages <b>'+targetName+'</b> for <b>'+ damage.toString()+'</b> '+damageType+' damage');
+	if(damage>0&&speschuls["toxic"]>-1){toxicTest(targetToken, speschuls["toxic"], damageType);}
 	if((hp<0)&&(damage>0)){
 		if(!speschuls["force"]&&!speschuls["sanctified"]&&hasAbility(targetToken, "stuffofnightmares")&&hp>-8){
 			sendChat("Stuff of nightmares", "/em Prevented critical effects!");
