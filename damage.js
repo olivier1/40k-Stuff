@@ -203,7 +203,7 @@ function damage(param){
 	hp=hpDamage(targetToken, damage);
 
 	sendChat(shooterName, 'damages <b>'+targetName+'</b> for <b>'+ damage.toString()+'</b> '+damageType+' damage');
-	if(damage>0&&speschuls["toxic"]>-1){toxicTest(targetToken, speschuls["toxic"], damageType);}
+	
 	if((hp<0)&&(damage>0)){
 		if(!speschuls["force"]&&!speschuls["sanctified"]&&hasAbility(targetToken, "stuffofnightmares")&&hp>-8){
 			sendChat("Stuff of nightmares", "/em Prevented critical effects!");
@@ -212,6 +212,7 @@ function damage(param){
 		}
 
 	}
+	if(!hasAbility(targetToken,"Undying")&&damage>0&&speschuls["toxic"]>-1){toxicTest(targetToken, speschuls["toxic"], damageType);}
 	if(speschuls["tesla"]&&(tesla||targetToken.get("status_dead")||targetToken.get("status_sleepy"))){
 		sendChat("Tesla", "The tesla weapon arcs to another target within 15m!");
 	}
@@ -246,7 +247,7 @@ function shockTest(token){
 
 	if(!abilityTest(token, "T",0 )){
 
-		degrees=parseInt(token.get("gmnotes"));
+		degrees=parseInt(token.get("gmnotes"))+1;
 
 		sendChat(token.get("name"), token.get("name")+" is stunned "+ degrees.toString()+" rounds because of the shocking weapon!");
 		token.set("status_lightning-helix",degrees);
@@ -258,7 +259,7 @@ function concussTest(token, modifier, damage){
 
 
 	if(!abilityTest(token, "T",modifier*-10 )){
-		degrees=parseInt(token.get("gmnotes"));
+		degrees=parseInt(token.get("gmnotes"))+1;
 
 
 		sendChat(token.get("name"), token.get("name")+" is stunned <b>"+ degrees.toString()+"</b> rounds because of the concussive attack!");

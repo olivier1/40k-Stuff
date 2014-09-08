@@ -332,7 +332,10 @@
            	<input type="hidden" name="attr_wpb" value="floor(@{WP}/10)" disabled="true">
         <button type="roll" name="roll_Fel" value="!sheettest/@{character_name}/Fellowship/@{fel}+?{modifier|0}"><label>Fellowship (Fel)</label></button><br>
            	<input type="text" name="attr_fel" value="0" />  
-           	<input type="hidden" name="attr_felb" value="floor(@{Fel}/10)" disabled="true">                                                                                                       
+           	<input type="hidden" name="attr_felb" value="floor(@{Fel}/10)" disabled="true">
+        <button type="roll" name="roll_Inf" value="!sheettest/@{character_name}/Influence/@{inf}+?{modifier|0}"><label>Influence (Inf)</label></button><br>
+            <input type="text" name="attr_inf" value="0" />  
+            <input type="hidden" name="attr_infb" value="floor(@{Inf}/10)" disabled="true">                                                                                                       
     </div>
     
     <!-- Right Column -->
@@ -609,8 +612,21 @@
         </fieldset>
         
         <h3>Gear</h3>
+        <table class="sheet-gear-header" style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Weight</th>
+            </tr>
+        </table>
+        <fieldset class="repeating_gear">
+            <table class="sheet-gear">
+                <tr>
+                    <td><input type="text" name="attr_gearname"/></td>
+                    <td><input type="text" name="attr_gearweight"/></td>
+                <tr/>
+            </table>
+            </fieldset>
         
-        <textarea name="attr_gear"></textarea><br /><br />
         
         
         <!-- Movement -->
