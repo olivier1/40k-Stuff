@@ -302,6 +302,32 @@
         border:1px solid gray;
         text-align:center;
     }
+.charsheet .sheet-wrapper .sheet-gear td:first-child {
+        width:85%;
+        height:24px;        
+        border:1px solid gray; 
+    }
+    
+
+.charsheet .sheet-wrapper .sheet-gear td:last-child {
+        width:15%;
+        height:24px;
+        border:1px solid gray;
+        text-align:center;
+    } 
+
+.charsheet .sheet-wrapper .sheet-gear-header th:first-child {
+        width:85%;
+        height:24px;        
+        border-bottom:1px solid gray;
+        
+    }
+.charsheet .sheet-wrapper .sheet-gear-header th:last-child {
+        width:15%;
+        height:24px;
+        border-bottom:1px solid gray;
+        text-align:center;
+    }   
 .charsheet .sheet-wrapper .sheet-skills button[type="roll"] {
     width: 24px;
 }
@@ -446,20 +472,22 @@
 
     .charsheet .sheet-wrapper .sheet-characteristics button[type="roll"] label,
     .charsheet .sheet-wrapper .sheet-characteristics button[type="roll"] input {
+        display:inline-block;
         height:25px;
         line-height: 25px;
         font-size: 16px;
         font-weight: bold;
         font-family: inherit;        
     	vertical-align: center;
-    	text-align:center;
-    	width: 99%;
+    	text-align: center;
+    	width: 100%;
     	cursor: pointer;
     	background: none;
     	box-shadow: none;
     	transition: none;
     	border-radius: none;
         border:none;
+
     }
     
     .charsheet .sheet-wrapper .sheet-characteristics button[type="roll"]:hover label,
@@ -468,13 +496,16 @@
         border: none;
         background-color: #DAA520;
     	border-color: #DAA520; 
-        border-radius: 5px;       
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;       
     }
     
 .charsheet .sheet-wrapper .sheet-characteristics button[type="roll"] {
+		display:inline-block;
 		border: none;
 		background-color: transparent; 
-		width: 100%;
+		width: 49%;
         margin:auto;
 		text-align:center;
         font-family: inherit;
@@ -482,18 +513,18 @@
     
 .charsheet .sheet-wrapper .sheet-characteristics select {
 		display:inline-block;
-		width:100%;
-        text-align: center;
+		width:50%;
+        text-align: left;
         background-color:transparent;
         border:0;
         font-weight:bold;
 	}
     
 .charsheet .sheet-wrapper .sheet-characteristics input {	
-		display:block;
+		display:inline-block;
 		border:1px solid gray;
 		background-color:transparent; 
-		width:70%;
+		width:49%;
 		height:65px;
         margin:auto;
 		text-align:center;

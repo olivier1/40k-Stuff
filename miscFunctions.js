@@ -104,3 +104,18 @@ function getCharAbilityValue(char, ability){
 	
 	return abilityValue;
 }
+on("chat:message", function(msg) {
+	if(msg.type=="api" && msg.content.indexOf('!UPDATEFATIGUE')!==-1){
+		var currentPageGraphics = findObjs({type: "graphic"});
+	_.each(currentPageGraphics, function(obj) {    
+	  if(obj.get("represents") != ""){
+	  	log(obj.get("name"));
+	  	var wp=getAbilityBonus(obj, "wp");
+	  	var t=getAbilityBonus(obj,"t");
+	  	var abilityObject=findObjs({ name: "fatigue", _characterid: obj.get("represents") }, {caseInsensitive: true});
+	abilityObject[0].set("max", t+wp);
+	  	obj.set("bar3_max",wp+t);
+	  }
+	});
+}
+});

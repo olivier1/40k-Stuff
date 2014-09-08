@@ -38,15 +38,17 @@ on("chat:message", function(msg) {
 			
 		var stat=param[2];
 
-		var modifierNumber=eval(param[3])
+		var modifierNumber=eval(param[3]);
 		
 		
 		var shooterChar=shooterCharObject[0];
+
+		var characteristic=param[4];
 		
 		if(!shooterChar){
 			sendChat("ERROR", "Token represents no character");
 		}else{
-			characterTest(shooterChar, stat, modifierNumber);
+			characterTest(shooterChar, stat, modifierNumber, characteristic);
 		}
 		
 	}
@@ -117,8 +119,8 @@ function abilityTest(token, ability, modifier){
 
 
 	var fatigueValue= parseInt(token.get("bar3_value"));
-	if(fatigueValue>0){
-		modifier=modifier-10;
+	if(fatigueValue>Math.floor(abilityValue/10)){
+		modifier=modifier-Math.floor(abilityValue/2);
 	}
 	var roll=randomInteger(100);
 	
@@ -177,7 +179,7 @@ function evasion(token, ability){
 	}
 }
 
-function characterTest(char, ability, modifier){
+function characterTest(char, ability, modifier, characteristic){
 	var message="";
 	if(ability.indexOf("GM")!==-1){
 		message="/w gm ";
@@ -186,11 +188,11 @@ function characterTest(char, ability, modifier){
 	
 	
 	
-
+	
 
 	var fatigueValue= getCharAbilityValue(char, "fatigue");
-	if(fatigueValue>0){
-		modifier=modifier-10;
+	if(fatigueValue>Math.floor(characteristic/10)){
+		modifier=modifier-Math.floor(characteristic/2);
 	}
 	var roll=randomInteger(100);
 	

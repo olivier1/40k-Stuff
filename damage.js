@@ -354,8 +354,12 @@ function addFatigue(targetToken, fatigue){
 	var maxFatigue=parseInt(targetToken.get("bar3_max"));
 
 	currFatigue=parseInt(currFatigue)+parseInt(fatigue);
+	if(currFatigue>2*maxFatigue){
+		targetToken.set("status_dead",true);
+		sendChat(targetToken.get("name"),"/em dies from fatigue.");
+	}
 	if(currFatigue>maxFatigue){
-		targetToken.set({bar3_value: parseInt(maxFatigue)});
+		
 		targetToken.set("status_sleepy",true);
 		sendChat(targetToken.get("name"),"/em falls unconscious from fatigue.");
 	}else{
