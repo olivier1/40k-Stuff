@@ -98,19 +98,14 @@ function burning(token){
 	}
 }
 function bleeding(token){
-	var value=randomInteger(10);
-	if(value==1){
-		var dieHard=findObjs({ name: 'DieHard', _characterid: token.get("represents") }, {caseInsensitive: true});
-		if(dieHard.length!==0){
-			value=randomInteger(10);
-			if(value!==1){
-				sendChat(token.get("name"),"/em refuses to die from his wounds!");
+	
+		if(hasAbility(token, "DieHard")){
+			if(abilityTest(token, "wp")){
+				sendChat(token.get("name"), "gathers the will to survive his injuries.");
 				return;
 			}
 		}
-		token.set("status_dead",true);
-		sendChat(token.get("name"),"/em bleeds out from his wounds!");
-	}else{
-		sendChat(token.get("name"),"/em continues bleeding but is ok for now");
-	}
+		addFatigue(token, 1);
+		sendChat(token.get("name"), "bleeds from his injuries and gains 1 fatigue.");
+		
 }

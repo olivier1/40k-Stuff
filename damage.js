@@ -301,8 +301,8 @@ function catchFire(token){
 
 }
 function toughnessReduction(char, specials){
-	var toughObject=findObjs({ name: 'TB', _characterid: char }, {caseInsensitive: true});
-	var tough=parseInt(toughObject[0].get("current"));
+	var toughObject=findObjs({ name: 'T', _characterid: char }, {caseInsensitive: true});
+	var tough=Math.floor(toughObject[0].get("current")/10);
 	var utObject=findObjs({ name: 'UT', _characterid: char }, {caseInsensitive: true});
 
 	if (utObject.length!==0){
@@ -358,11 +358,10 @@ function addFatigue(targetToken, fatigue){
 		targetToken.set("status_dead",true);
 		sendChat(targetToken.get("name"),"/em dies from fatigue.");
 	}
-	if(currFatigue>maxFatigue){
+	if(currFatigue>maxFatigue&&!targetToken.get("status_sleepy")){
 		
 		targetToken.set("status_sleepy",true);
 		sendChat(targetToken.get("name"),"/em falls unconscious from fatigue.");
-	}else{
-		targetToken.set({bar3_value: parseInt(currFatigue)});
 	}
+	targetToken.set({bar3_value: parseInt(currFatigue)});
 }
