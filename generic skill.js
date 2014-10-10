@@ -129,7 +129,7 @@ function abilityTest(token, ability, modifier){
 	token.set("status_green",false);
 	token.set("status_brown",false);
 	if(roll<=toBeat){
-		degrees= Math.floor((toBeat-roll)/10).toString();
+		degrees= Math.floor(((toBeat-roll)/10+1)).toString();
 		message+="<div style='background-color:#339900'>Succeeds the <b>"+abilityNames[ability.toString().toLowerCase()]+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> scored <b>" +degrees + "</b> degrees of success.</div>";
 		if((token.get("gmnotes")!==999)&&(ability.indexOf("BS")!==-1||ability.indexOf("WS")!==-1)){
 			hitLocation(roll);
@@ -141,8 +141,8 @@ function abilityTest(token, ability, modifier){
 		token.set("status_green",0);
 		return true;
 	}else{
-		degrees=Math.abs(Math.ceil((toBeat-roll)/10)).toString();
-		message+="<div style='background-color:#DD0000'>Fails the <b>"+abilityNames[ability.toString().toLowerCase()]+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> got <b>"+ degrees + "</b> degrees of failure.</div>";
+		degrees=Math.abs(Math.ceil(((toBeat-roll)/10)-1));
+		message+="<div style='background-color:#DD0000'>Fails the <b>"+abilityNames[ability.toString().toLowerCase()]+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> got <b>"+ degrees.toString() + "</b> degrees of failure.</div>";
 		sendChat(token.get("name"),message);
 		token.set("gmnotes", degrees);
 		token.set("status_brown",0);
@@ -200,7 +200,7 @@ function characterTest(char, ability, modifier, characteristic){
 	var degrees=0;
 	
 	if(roll<=toBeat){
-		degrees= Math.floor((toBeat-roll)/10).toString();
+		degrees= Math.floor((toBeat-roll)/10+1).toString();
 		message+="<div style='background-color:#339900'>Succeeds the <b>"+ability.toString()+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> scored <b>" +degrees + "</b> degrees of success.</div>";
 		
 		
@@ -208,8 +208,8 @@ function characterTest(char, ability, modifier, characteristic){
 		
 		return true;
 	}else{
-		degrees=Math.abs(Math.ceil((toBeat-roll)/10)).toString();
-		message+="<div style='background-color:#DD0000'>Fails the <b>"+ability.toString()+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> got <b>"+ degrees + "</b> degrees of failure.</div>";
+		degrees=Math.abs(Math.ceil(((toBeat-roll)/1)-1));
+		message+="<div style='background-color:#DD0000'>Fails the <b>"+ability.toString()+"</b> check! rolled a <b>"+ roll.toString() + "</b> against <b>"+toBeat.toString()+"</b> got <b>"+ degrees.toString() + "</b> degrees of failure.</div>";
 		sendChat(char.get("name"),message);
 		
 		

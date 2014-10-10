@@ -192,6 +192,11 @@ function damage(param){
 
 
 	}
+	if(damage>0&&speschuls["bleed"]){
+		var bleedRounds=randomInteger(5);
+		sendChat("Bleeding", "The attack inflicts bleeding wounds for <b>"+bleedRounds.toString()+"</b> rounds!");
+		targetToken.set("status_red",bleedRounds);
+	}
 	if(speschuls["shocking"]&&(damage>0)){shockTest(targetToken);}
 	if(speschuls["concussive"]>-1){concussTest(targetToken,speschuls["concussive"], damage);}
 	var hp=targetToken.get("bar1_value");
@@ -247,7 +252,7 @@ function shockTest(token){
 
 	if(!abilityTest(token, "T",0 )){
 
-		degrees=parseInt(token.get("gmnotes"))+1;
+		degrees=parseInt(token.get("gmnotes"));
 
 		sendChat(token.get("name"), token.get("name")+" is stunned "+ degrees.toString()+" rounds because of the shocking weapon!");
 		token.set("status_lightning-helix",degrees);
@@ -259,7 +264,7 @@ function concussTest(token, modifier, damage){
 
 
 	if(!abilityTest(token, "T",modifier*-10 )){
-		degrees=parseInt(token.get("gmnotes"))+1;
+		degrees=parseInt(token.get("gmnotes"));
 
 
 		sendChat(token.get("name"), token.get("name")+" is stunned <b>"+ degrees.toString()+"</b> rounds because of the concussive attack!");
